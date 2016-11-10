@@ -250,6 +250,7 @@ def filter(x,y):
 
 #### for writing
 a[filter] = '2'
+#### or
 a[filter] = lambda x, y: x**2 + 2*y + 1
 
 #### for reading
