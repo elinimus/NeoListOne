@@ -40,16 +40,16 @@ a[5]
 ## APPEND
 
 #### appends number 5 to the list
-a['append'] = 5
-a['append:'] = 5
+a['append'] = 5  
+a['append:'] = 5  
 
 #### appends 99 four times to the list
-a['append: x < 4'] = 99
+a['append: x < 4'] = 99  
 
 #### appends a number (y), but only if it satisfies the
 #### conditions. In this case, because 101 is bigger than
 #### 24, it will not be appended
-a['append: y > 20 and y <24'] = 101
+a['append: y > 20 and y <24'] = 101  
 
 #### number 23 will be appended
 a['append: y > 20 and y <24'] = 23
@@ -86,9 +86,9 @@ a['count: 4']
 ## DELETE
 
 #### deletes the entire content of the list
-a['delete']
-a['delete: :']
-a['delete:::']
+a['delete']  
+a['delete: :']  
+a['delete:::']  
 
 #### deletes elements with values equal to 4
 a['delete: y == 4']
@@ -158,14 +158,14 @@ a['push'] = 9
 ## SORT / ASCEND
 
 #### sorts the list in ascending order of the values
-a['sort']
-a['ascend']
+a['sort']  
+a['ascend']  
 
 ## REVERSE/DESCEND
 
 #### sorts the list in descending order of the values
-a['reverse']
-a['descend']
+a['reverse']  
+a['descend']  
 
 
 ## READ IN-PLACE INDEX:VALUE FILTER
@@ -212,9 +212,9 @@ a['x < 8: y > 2']
 a[' x < 3'] = 5
 
 #### with string variables
-filter1 = ' x < 3'
-filter2 = 'or x > 8'
-a[filter1 + filter2] = 5
+filter1 = ' x < 3'  
+filter2 = 'or x > 8'  
+a[filter1 + filter2] = 5  
 
 #### sets to 5 the value of all elements with value 4
 a[' y == 4'] = 5
@@ -237,11 +237,11 @@ a['x < 5: y > 3'] = lambda x, y: x**2 + y
 #### the same as in-place index filters, but the code is moved to 
 #### functions
 
-def filter1(x,y):
-    return x < 5 and y > 25
+def filter1(x,y):  
+    return x < 5 and y > 25  
     
-def filter2(x,y):
-    return x%2
+def filter2(x,y):  
+    return x%2  
 
 #### because each filter is returning a boolean value,
 #### the filters are combined with the logical operators (and, or, not)
@@ -249,9 +249,8 @@ def filter(x,y):
     return filter1(x,y) and filter2(x,y)
 
 #### for writing
-a[filter] = '2'
-#### or
-a[filter] = lambda x, y: x**2 + 2*y + 1
+a[filter] = '2'  
+a[filter] = lambda x, y: x**2 + 2*y + 1  
 
 #### for reading
 a[filter]
