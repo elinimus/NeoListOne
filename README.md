@@ -2,10 +2,10 @@
 
 Experiments with custom indexing in Python.
 
-Use cases:
+Use cases:  
 
-x - index
-y - value
+x - index  
+y - value  
 
 ## INITIALIZATION
 
